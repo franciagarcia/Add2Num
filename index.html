@@ -39,22 +39,22 @@
                 return;
             }
 
-            // Use the POST method to send the numbers to the server
-            fetch('/add', {
-                method: 'POST',
-                headers: {
+         fetch('/add', {
+            method: 'POST',
+            headers: {
                     'Content-Type': 'application/json',
-                },
+            },
                 body: JSON.stringify({ num1, num2 }),
-            })
-            .then(response => response.text())
-            .then(data => {
+        })
+        .then(response => response.text())
+        .then(data => {
                 document.getElementById('result').innerText = data;
-            })
-            .catch(error => {
-                document.getElementById('result').innerText = 'Error: ' + error;
-            });
+         })
+        .catch(error => {
+            document.getElementById('result').innerText = 'Error: ' + error;
         });
+    
+    });
     </script>
 </body>
 </html>
