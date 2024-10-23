@@ -25,6 +25,7 @@ app.post('/add', (req, res) => {
     res.send(`Sum is ${sum}`);
 });
 
-app.listen(4000, () => {
-    console.log('Server is running on port 4000');
-  });
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+  console.log(`App is running on port ${port}`);
+});
